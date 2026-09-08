@@ -33,12 +33,10 @@ jobs:
             npm install -g node-gyp
             npm install --omit=dev
             npm run build || node-gyp rebuild
-            mkdir -p dist/tree-sitter-bash-loong64
-            cp -R node_modules dist/tree-sitter-bash-loong64
           '
 
     - name: 上传构建产物
       uses: actions/upload-artifact@v4
       with:
         name: tree-sitter-bash-loong64
-        path: dist/tree-sitter-bash-loong64
+        path: ./
