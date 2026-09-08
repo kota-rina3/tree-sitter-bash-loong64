@@ -32,7 +32,7 @@ jobs:
             npm -v
             npm install --omit=dev
             npm run build || node-gyp rebuild 
-
+            npx node-gyp rebuild
             mkdir -p dist/tree-sitter-bash-loong64
             cp -R node_modules dist/tree-sitter-bash-loong64
           '
